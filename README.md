@@ -1,4 +1,4 @@
-# # Data Analytics Portfolio
+# Data Analytics Portfolio
 
 Hi, I'm **Tapiwa Mutarimanja**, a Master's student in **Data Analytics & Visualization** at Yeshiva University's Katz School of Science and Health, with a passion for transforming data into actionable insights.
 
@@ -71,7 +71,7 @@ Designed a relational database schema (12+ tables) with a dimensional warehouse 
 ## Contact
 - Email: tapiwanashemutarimanja@gmail.com
 - GitHub: [github.com/TMutarimanja](https://github.com/TMutarimanja)
-- LinkedIn: *(add link)*
+- LinkedIn: [linkedin.com/in/tapiwa-mutarimanja-5b2674392](https://www.linkedin.com/in/tapiwa-mutarimanja-5b2674392)
 
 ---
 Thank you for visiting my portfolio!
