@@ -60,6 +60,8 @@ Designed a relational database schema (12+ tables) with a dimensional warehouse 
 - Microsoft Power BI Data Analyst (PL-300)
 - Microsoft Azure Data Fundamentals (DP-900)
 - Microsoft Azure AI Fundamentals (AI-900)
+- AWS Cloud Practitioner Essentials
+- 
 
 ## Skills
 **Programming:** Python (pandas, NumPy, matplotlib, scikit-learn), R, SQL (PostgreSQL)
