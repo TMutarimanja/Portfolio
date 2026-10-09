@@ -1,79 +1,84 @@
-# Data Analytics Portfolio
+# Tapiwa Mutarimanja — Data Analytics Portfolio
 
-Hi, I'm **Tapiwa Mutarimanja**, a Master's student in **Data Analytics & Visualization** at Yeshiva University's Katz School of Science and Health, with a passion for transforming data into actionable insights.
+M.S. Data Analytics & Visualization, Yeshiva University (May 2027, GPA 3.77) · B.Com (Hons) Information Systems · Jersey City, NJ
 
-## About Me
-I enjoy solving business problems through data using:
-- Python (pandas, NumPy, matplotlib, scikit-learn)
-- R
-- SQL (PostgreSQL)
-- Tableau
-- AWS (S3, Lambda, DynamoDB, SNS)
-- Machine Learning & NLP
-- Data Modeling & Database Design
+I take messy public data, clean and model it in **SQL** and **Python/R**, test what's actually going on, and turn it into recommendations that decision-makers can act on.
 
-## Contents
-- [Projects](#projects)
-- [In Progress / Upcoming](#in-progress--upcoming)
-- [Certifications](#certifications-in-progress)
-- [Skills](#skills)
-- [Contact](#contact)
+**Looking for:** data analyst internships and entry-level roles.
+📧 tapiwanashemutarimanja@gmail.com · [LinkedIn](https://www.linkedin.com/in/tapiwa-mutarimanja-5b2674392)
 
 ---
 
 ## Projects
 
-### [NFL Elo Ratings](#) *(add link)*
-**Tools:** R
-Built an Elo rating system to model and track NFL team strength over time, using game results to iteratively update ratings and generate predictive power rankings.
+### 🏠 [NYC Housing: Do Tenant Complaints Predict Hazards?](https://github.com/TMutarimanja/nyc-housing-complaints-violations)
+**SQL · Python · Tableau** · 5M+ NYC Open Data records
 
-### [Amazon Sentiment Analysis](#) *(add link)*
-**Tools:** Python, NLP, Machine Learning
-Built a sentiment classifier achieving 87% accuracy using TF-IDF and logistic regression on 50,000+ Amazon reviews. Applied NLP preprocessing (tokenization, stop-word removal) to improve model performance.
+<img src="images/housing.png" width="560" alt="Share of buildings with a hazardous violation by complaint tier">
 
-### [Customer Feedback Pipeline](#) *(add link)*
-**Tools:** AWS (S3, Lambda, DynamoDB, SNS), Python
-Designed a serverless AWS data pipeline for sentiment analysis, integrating S3, Lambda, DynamoDB, and SNS. Built a dashboard visualizing sentiment trends across product categories.
-
-### [Childcare Finder](#) *(add link)*
-**Tools:** Tableau, Product Analytics, User Research
-Conducted user research with 20+ participants and prototyped a data product addressing NYC childcare affordability. Built Tableau dashboards visualizing childcare cost disparities across neighborhoods.
-
-### [NYC Housing Analysis](#) *(add link)*
-**Tools:** Tableau, SQL
-Analyzed housing complaints and violations datasets and built an interactive Tableau dashboard to support stakeholder decisions. Integrated datasets to uncover relationships between complaints and housing code violations.
-
-### [Disease Management System](#) *(add link)*
-**Tools:** PostgreSQL, SQL, Data Warehousing
-Designed a relational database schema (12+ tables) with a dimensional warehouse model for disease surveillance. Created SQL views and reports identifying seasonal disease patterns.
+- Buildings with 3+ complaints per unit had a **75% chance of an immediately hazardous violation the following year**, vs 4% for buildings with none.
+- **1% of buildings** generate **35%** of complaints and hazardous violations; the Bronx's hazard rate is **4.1×** Manhattan's.
+- Recommendation: proactive pre-winter inspections of the ~2,800 highest-risk buildings.
 
 ---
 
-## In Progress / Upcoming
-- Power BI Dashboards (Sales, HR, Financial, Healthcare)
-- Neo4j Knowledge Graph & Graph Data Science projects
-- GraphRAG Chatbot
-- Capstone Project
+### 🦠 [Disease Surveillance Data Warehouse](https://github.com/TMutarimanja/disease-surveillance-warehouse)
+**PostgreSQL · dimensional modeling · ETL · Python** · 1.7M CDC rows
 
-## Certifications (In Progress)
-- Neo4j Graph Data Science
-- Microsoft Power BI Data Analyst (PL-300)
-- Microsoft Azure Data Fundamentals (DP-900)
-- Microsoft Azure AI Fundamentals (AI-900)
-- AWS Cloud Practitioner Essentials
-- 
+<img src="images/disease.png" width="560" alt="Seasonal index heatmap of notifiable diseases">
+
+- 3-layer warehouse (staging → 3NF → star schema) with alias tables, an MMWR calendar and an ETL audit log; **reconciles to CDC's national totals to 0.00%**.
+- Maps disease seasonality: enteric infections peak July–August, West Nile in September (5× an average month).
+- Surfaced a **13× pertussis resurgence** (2022→2024) and a 2025 measles spike.
+
+---
+
+### 🛒 [Amazon Review Sentiment: Simple Beats Complex](https://github.com/TMutarimanja/amazon-reviews-sentiment-architecture)
+**Python · scikit-learn · PyTorch · DistilBERT** · 4M reviews
+
+<img src="images/amazon.png" width="560" alt="Model comparison: F1 and training time">
+
+- **F1 0.906 / ROC-AUC 0.966** on a locked 400k-review test set, with a leakage audit and 5-fold CV (±0.001).
+- TF-IDF + linear SVM **outperformed fine-tuned DistilBERT** on the same data and trained **82× faster**, so I recommended the simpler model.
+
+---
+
+### 🏈 [NFL Home-Field Advantage Is Real — Then It Collapsed](https://github.com/TMutarimanja/nfl-elo-home-field-advantage)
+**R · logistic regression · ggplot2** · 5,805 games
+
+<img src="images/nfl.png" width="560" alt="Home-field advantage by season">
+
+- Home teams won **58%** of evenly matched games through 2018, then about **50%** from 2019 to 2021 (likelihood-ratio test p = 0.0018). Co-authored with Rodney Chiwanga.
+- Found and corrected a flaw in our own first model specification; out-of-sample AUC 0.69 on held-out seasons.
+
+---
+
+### ☁️ [Customer Feedback Sentiment Pipeline](https://github.com/TMutarimanja/customer-feedback-sentiment-pipeline)
+**AWS (S3, Lambda, DynamoDB, SNS, API Gateway) · Python · CloudFormation**
+
+- Event-driven, serverless pipeline: feedback file upload → sentiment scoring → dashboard → alerts on negative spikes.
+- Evaluated the rule-based classifier (80% on labeled sample) and documented its failure modes: no stemming, no negation handling.
+
+---
+
+### 👶 [Bloom2gether: NYC Childcare Benefits Navigator](https://github.com/TMutarimanja/nyc-family-benefits)
+**Product analytics · user research · A/B testing · Flask**
+
+- 15 parent interviews identified cost as the #1 barrier; built a 5-question benefits screener.
+- A/B test (N=100): engagement **41% → 53%** (+12 pp), mobile +20 pp.
+
+---
 
 ## Skills
-**Programming:** Python (pandas, NumPy, matplotlib, scikit-learn), R, SQL (PostgreSQL)
-**BI & Visualization:** Tableau, Matplotlib, Seaborn
-**Cloud:** AWS (S3, Lambda, DynamoDB, SNS)
-**ML & Data:** Classification, regression, NLP, data modeling, database design
-**Tools:** Git/GitHub, Jupyter, VS Code, Excel, Word, PowerPoint
 
-## Contact
-- Email: tapiwanashemutarimanja@gmail.com
-- GitHub: [github.com/TMutarimanja](https://github.com/TMutarimanja)
-- LinkedIn: [linkedin.com/in/tapiwa-mutarimanja-5b2674392](https://www.linkedin.com/in/tapiwa-mutarimanja-5b2674392)
+| | |
+|---|---|
+| **SQL** | PostgreSQL, SQLite: CTEs, window functions, views, star schemas, data validation |
+| **Python** | pandas, NumPy, matplotlib, scikit-learn, Jupyter |
+| **R** | dplyr, ggplot2, regression modelling, R Markdown |
+| **BI & visualization** | Tableau, matplotlib, ggplot2, Excel |
+| **Cloud & data engineering** | AWS (S3, Lambda, DynamoDB, SNS), ETL, CloudFormation, Git |
 
----
-Thank you for visiting my portfolio!
+## Certifications in progress
+
+Microsoft Power BI Data Analyst (PL-300) · Microsoft Azure Data Fundamentals (DP-900) · Neo4j Graph Data Science
